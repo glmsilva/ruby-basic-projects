@@ -6,8 +6,10 @@ def caesarCipher(string,number)
   new_string =[]
 
   string.each_char do |ch|
+    
     if ch.ord == 32 
       new_string.push(32.chr)
+
     elsif upperc_char.include?(ch.ord) || downc_char.include?(ch.ord)
  
      if (ch.ord+number) > 90 && (ch.ord+number < 97)
@@ -23,12 +25,14 @@ def caesarCipher(string,number)
    else
  
     new_string.push(ch.ord.chr)
+
   end
+
     end
      
-   phrase = new_string.join.split("\\")
-    print phrase.join
-    puts "\n"
+  phrase = new_string.join.split("\\")
+  print phrase.join
+  puts "\n"
 end
 
 puts "Enter your awesome string below: "
